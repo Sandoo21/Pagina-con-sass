@@ -1,8 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+@mixin btn {
+  display: inline-block;
+  font-size: 15px;
+  padding: 12px 40px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
+@mixin h2($fs){
+  font-size: $fs; 
+}
+
+
 $font-stack: 'Montserrat', sans-serif;
-$primary-color: #0E4E90;
-$secondary-color: #3EB5E1;
+$primary-color: #113253;
+$secondary-color: #469bb9;
 $gray-color: #4D4D4D;
 
 // Reset
@@ -24,7 +40,7 @@ body {
 
 h1 { font-size: 3rem; }
 h2 { 
-  font-size: 2.8rem; 
+  @include h2(2.8rem);
   font-weight: 500;
   text-transform: uppercase
   ;
@@ -52,15 +68,9 @@ a { text-decoration: none; }
 .large { font-size: 1.25rem; }
 
 .btn {
-  display: inline-block;
-  font-size: 15px;
-  padding: 12px 40px;
-  cursor: pointer;
-  font-weight: bold;
-  letter-spacing: 1px;
-  border-radius: 30px;
-  text-transform: uppercase;
+ @include btn;
 }
+ 
 
 .btn-dark {
   background: $secondary-color;
@@ -148,12 +158,16 @@ form {
         padding-top: 15px;
         padding-bottom: 20px;
       }
-    } //End #showcase .showcase-row &-txt
+    } 
+    //End #showcase .showcase-row &-txt
     &-img {
       padding-left: 20px;
-    } //End #showcase .showcase-row &-img
-  } //End #showcase .showcase-row
-} //End #showcase
+    } 
+    //End #showcase .showcase-row &-img
+  } 
+  //End #showcase .showcase-row
+} 
+//End #showcase
 
 /* Services */
 #services {
