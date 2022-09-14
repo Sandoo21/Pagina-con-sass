@@ -67,9 +67,15 @@ a {
   color: #FFF;
 }
 
+.btn-dark:hover{
+  cursor: pointer;
+  color: #0E4E90;
+}
+
 .txt-secondary {
   color: #3EB5E1;
 }
+
 
 form label {
   display: inline-block;
@@ -110,6 +116,14 @@ form .form-control {
 #navbar a {
   color: #fff;
 }
+
+#navbar a:hover{
+  color: #a0b0c0;
+  cursor: pointer;
+  text-decoration: dashed;
+}
+
+
 #navbar .logo {
   float: left;
   padding-top: 25px;
